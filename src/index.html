@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/7c8805ecdd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+      <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+        <img
+          src="../assets/asset 0.png"
+          alt="Logo"
+          class="object-cover max-h-12 max-w-12"
+        />
+        <span class="text-lg font-display font-medium">ToDesktop</span>
+      </a>
+
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="#" class="font-medium hover:text-primary">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary">Docs</a>
+        <a href="#" class="font-medium hover:text-primary">Changelog</a>
+        <a href="#" class="font-medium hover:text-primary">Blog</a>
+        <a href="#" class="font-medium hover:text-primary">Login</a>
+      </div>
+      <div class="hidden md:flex flex-1 justify-end">
+        <button
+          class="flex gap-2 items-center border border-gray-300 px-6 py-4 hover:border-gray-600 rounded-lg"
+        >
+          <img src="../assets/asset 1.svg" alt="Electro Developers Icon" />
+          <span>Electron Developers</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <button class="pr-2 md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <div
+        id="nav-dialog"
+        class="fixed bg-white inset-0 p-3 z-10 md:hidden hidden"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img
+              src="../assets/asset 0.png"
+              alt="Logo"
+              class="object-cover max-h-12 max-w-12"
+            />
+            <span class="text-lg font-display font-medium">ToDesktop</span>
+          </a>
+          <button class="pr-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href="#"
+            class="block rounded-lg font-medium hover:bg-gray-100 m-3 p-3"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="block rounded-lg font-medium hover:bg-gray-100 m-3 p-3"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="block rounded-lg font-medium hover:bg-gray-100 m-3 p-3"
+            >Changelog</a
+          >
+          <a
+            href="#"
+            class="block rounded-lg font-medium hover:bg-gray-100 m-3 p-3"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="block rounded-lg font-medium hover:bg-gray-100 m-3 p-3"
+            >Login</a
+          >
+        </div>
+        <div class="h-px bg-gray-300"></div>
+        <button
+          class="mt-3 w-full flex gap-2 items-center px-6 py-4 hover:bg-gray-100 rounded-lg"
+        >
+          <img src="../assets/asset 1.svg" alt="Electro Developers Icon" />
+          <span>Electron Developers</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- hero section -->
+      <div
+        id="hero"
+        class="min-h-screen bg-linear-to-b from-purple-50 via-orange-50 to-transparent sm:pt-12"
+      >
+        <div
+          id="hero-container"
+          class="max-w-4xl mx-auto pb-32 px-6 pt-6 flex flex-col sm:items-center sm:text-center"
+        >
+          <div
+            id="version-text"
+            class="flex my-6 gap-2 items-center border border-yellow-50 px-3 py-1 w-fit rounded-lg bg-yellow-100 shadow-md hover:shadow-lg hover:-translate-y-1 transition group"
+          >
+            <div
+              class="h-2 w-2 rounded-full bg-yellow-400 border border-yellow-600"
+            ></div>
+            <p class="font-medium font-display text-yellow-500">
+              v 0.21.1:<span class="text-yellow-700"
+                >Find-in-page bug fixes</span
+              >
+            </p>
+            <i
+              class="fa-solid fa-arrow-right text-yellow-500 group-hover:translate-x-1 transition duration-300"
+            ></i>
+          </div>
+          <div id="hero-features" class="hidden sm:flex gap-8 my-6">
+            <div
+              class="flex justify-center items-center gap-2 px-2 py-1 text-gray-500"
+            >
+              <i class="fa-solid fa-file-code"></i>
+              <span>Code Optional</span>
+            </div>
+            <div
+              class="flex justify-center items-center gap-2 px-2 py-1 text-gray-500"
+            >
+              <i class="fa-solid fa-dice-d20"></i>
+              <span>Drag and drop feature</span>
+            </div>
+            <div
+              class="flex justify-center items-center gap-2 px-2 py-1 text-gray-500"
+            >
+              <i class="fa-solid fa-desktop"></i>
+              <span>Windows, Mac and Linux</span>
+            </div>
+          </div>
+          <h1 class="text-4xl font-semibold leading-snug mt-4 sm:text-6xl">
+            Web App to Desktop App in minutes
+          </h1>
+          <p
+            class="text-xl mt-4 sm:text-2xl sm:mt-8 sm:leading-normal text-gray-800"
+          >
+            Take your web app codebase and transform it into a cross platform
+            desktop app with native functionality
+          </p>
+          <div
+            id="button-container"
+            class="mt-12 flex flex-col sm:flex-row gap-4"
+          >
+            <button
+              class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:opacity-90"
+            >
+              Download now
+            </button>
+            <button
+              class="px-8 py-3 font-semibold rounded-lg text-back bg-white shadow-sm border border-gray-200 hover:border-gray-600"
+            >
+              Read docs
+            </button>
+          </div>
+        </div>
+        <div id="companies-container" class="flex flex-col gap-8">
+          <div id="companies-title" class="flex justify-center gap-2">
+            <img
+              src="../assets/asset 2.svg"
+              alt="Company Logo"
+              class="translate-y-2"
+            />
+            <span class="font-medium">APPS POWERED BY TODESKTOP</span>
+            <img
+              src="../assets/asset 2.svg"
+              alt="Company Logo"
+              class="translate-y-2 -scale-x-100"
+            />
+          </div>
+
+          <div id="companies-lines-group" class="flex flex-col gap-4">
+            <div id="line1" class="flex gap-6 w-screen -translate-x-48">
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 3.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 4.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 5.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 6.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 7.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 8.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 9.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 10.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset1 11.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 12.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 17.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 18.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 19.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 20.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+            </div>
+            <div id="line2" class="flex gap-6 w-screen -translate-x-36">
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 21.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 22.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 23.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 24.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 25.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 26.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 27.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 28.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 29.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 30.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 31.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 32.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 52.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 51.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 50.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 49.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+            </div>
+            <div
+              id="line3"
+              class="flex gap-6 w-screen -translate-x-48 md:hidden"
+            >
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 33.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 34.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 35.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 36.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 37.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 38.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 39.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 40.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 41.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 42.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 43.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 44.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 45.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 46.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 47.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col min-h-24 min-w-24 items-center justify-center bg-white rounded-xl border border-gray-300"
+              >
+                <img
+                  src="../assets/asset 48.png"
+                  alt=""
+                  class="w-12 h-12 md:w-16 md:h-16"
+                />
+                <span class="text-[12px] md:text-[16px] font-semibold"
+                  >Unbounce</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- step by step -->
+      <div id="steps" class="container">
+        <h2 class="text-5xl sm:font-semibold">How it works</h2>
+        <div
+          id="step1"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 1</span
+            >
+            <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+            <p class="text-lg font-light">
+              Copy and paste your web app url into ToDesktop. Customize your app
+              design, app icon and window frame UI with no code.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="pt-12">
+            <img src="../assets/asset 66.svg" alt="" />
+          </div>
+        </div>
+        <div
+          id="step2"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 2</span
+            >
+            <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+            <p class="text-lg font-light">
+              Copy and paste your web app url into ToDesktop. Customize your app
+              design, app icon and window frame UI with no code.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="pt-12">
+            <img src="../assets/asset 66.svg" alt="" />
+          </div>
+        </div>
+        <div
+          id="step3"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 3</span
+            >
+            <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+            <p class="text-lg font-light">
+              Copy and paste your web app url into ToDesktop. Customize your app
+              design, app icon and window frame UI with no code.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4 items-center">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href="#"
+                  class="text-lg font-light border-b border-gray-200 hover:border-gray-500"
+                  >Multiple windows</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="pt-12">
+            <img src="../assets/asset 66.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento Grid -->
+      <div id="bento-grid" class="container">
+        <h2 class="text-5xl sm:font-semibold mb-14">
+          ToDesktop handles the details
+        </h2>
+        <div
+          id="grid-container"
+          class="flex flex-col gap-6 lg:grid lg:grid-cols-3"
+          style="grid-auto-rows: 96px"
+        >
+          <div
+            class="row-start-1 row-end-3 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-1 row-end-5 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Auto Updates</h3>
+              <p class="text-lg text-center font-light">
+                We'll ensure the underlying browser is up to date and deliver
+                performance improvements, security patches & additional
+                features.
+              </p>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-1 row-end-3 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-3 row-end-7 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+            class="row-start-3 row-end-7 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Auto Updates</h3>
+              <p class="text-lg text-center font-light">
+                We'll ensure the underlying browser is up to date and deliver
+                performance improvements, security patches & additional
+                features.
+              </p>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-5 row-end-7 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-3 row-end-7 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Auto Updates</h3>
+              <p class="text-lg text-center font-light">
+                We'll ensure the underlying browser is up to date and deliver
+                performance improvements, security patches & additional
+                features.
+              </p>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-7 row-end-10 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-7 row-end-10 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Auto Updates</h3>
+              <p class="text-lg text-center font-light">
+                We'll ensure the underlying browser is up to date and deliver
+                performance improvements, security patches & additional
+                features.
+              </p>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="row-start-7 row-end-10 rounded-2xl group bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200 p-px"
+          >
+            <div
+              class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="../assets/asset 37.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Companies feature line -->
+      <div id="feature-line" class="container mt-4">
+        <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+          <div id="line4" class="flex gap-8 p-6">
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Menus
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Multi-window support
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Trays
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Deep Linking
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+          </div>
+        </div>
+      </div>
+      <div class="h-250"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
