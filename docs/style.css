@@ -23,4 +23,17 @@
     .container {
         @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32;
     }
+
+    .anchor-tag {
+        @apply border-b w-fit border-gray-300 border-dotted hover:border-gray-500 hover:border-solid;
+    }
+
+    .gradient-hover-outer {
+        @apply p-px bg-slate-100 hover:bg-linear-to-br hover:from-red-200 via-purple-200 to-yellow-200;
+    }
+
+    .gradient-hover-inner {
+        @apply bg-slate-50 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50;
+
+    }
 }
