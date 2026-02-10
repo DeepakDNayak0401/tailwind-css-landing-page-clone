@@ -34,3 +34,16 @@ setupIntersectionObserver(line3, true, 0.15);
 
 const line4 = document.getElementById("line4");
 setupIntersectionObserver(line4, false, 0.8);
+
+const dtElements = document.querySelectorAll('dt');
+dtElements.forEach(element => {
+    element.addEventListener('click', () => {
+        const ddID = element.getAttribute('aria-controls');
+        const ddElement = document.getElementById(ddID);
+        const ddArrowIcon = element.querySelectorAll('i')[0];
+
+        ddElement.classList.toggle('hidden');
+        ddArrowIcon.classList.toggle('-rotate-180');
+        ddArrowIcon.classList.toggle('transition-transform');
+    })
+})
