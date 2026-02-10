@@ -12,7 +12,9 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav class="p-3 flex justify-between items-center bg-white">
+    <nav
+      class="p-3 flex justify-between items-center bg-white fixed left-0 right-0 top-0 z-20 shadow-md"
+    >
       <a href="#" id="brand" class="flex gap-2 items-center flex-1">
         <img
           src="assets/asset 0.png"
@@ -98,7 +100,7 @@
     </nav>
 
     <!-- Main -->
-    <main>
+    <main class="mt-16">
       <!-- hero section -->
       <div
         id="hero"
@@ -754,7 +756,7 @@
         <h2 class="text-5xl sm:font-semibold">How it works</h2>
         <div
           id="step1"
-          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -823,7 +825,7 @@
         </div>
         <div
           id="step2"
-          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -892,7 +894,7 @@
         </div>
         <div
           id="step3"
-          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row"
+          class="rounded-xl border border-gray-100 px-8 py-12 flex flex-col mt-16 lg:flex-row justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -1666,7 +1668,42 @@
       </div>
 
       <!-- Footer -->
-      <div class="h-250"></div>
+      <div id="footer" class="container">
+        <div
+          class="rounder-lg border border-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8 bg-slate-100"
+        >
+          <a href="#" class="font-display font-light">Documentation</a>
+          <div class="flex gap-8 text-lg">
+            <a href="#" class="text-gray-600 hover:text-gray-900"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img
+              src="assets/asset 0.png"
+              alt="Logo"
+              class="object-cover max-h-12 max-w-12"
+            />
+            <span class="text-lg font-display font-medium">ToDesktop</span>
+          </a>
+        </div>
+        <div
+          id="sub-footer"
+          class="flex flex-col justify-center items-center my-12"
+        >
+          <div class="flex gap-2 items-center gap-6">
+            <img src="assets/asset 54.svg" alt="" class="w-4 h-4" />
+            <p class="text-sm text-gray-600">A Y COMBINATOR COMPANY</p>
+          </div>
+          <p class="text-sm text-gray-400">
+            <span class="text-sm">©️</span> 2026 ToDesktop, Inc. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </main>
 
     <script src="script.js"></script>
